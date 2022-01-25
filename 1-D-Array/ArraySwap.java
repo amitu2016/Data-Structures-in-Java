@@ -1,4 +1,4 @@
-public class ArrayDemo{
+public class ArraySwap {
     
     public static void main(String[] args) {
         int[] arr = null;
@@ -22,21 +22,23 @@ public class ArrayDemo{
         int i = 0 , j = 2;
 
         System.out.println(arr[i] + " " + arr[j]);
+        
+        int[] other = {100,200,300,400};
 
-        //Swapping the elemments at 0 and 2 positions
-        swap(arr, i, j);
+        System.out.println(arr[i] + " " + other[j]);
 
-        System.out.println(arr[i] + " " + arr[j]);
+        // Here swap doesnt happen
+        swap(arr,other);
 
-    }
-
-    public static void swap( int[] arr, int i, int j){
-
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        System.out.println(arr[i] + " " + other[j]);
 
     }
 
+    public static void swap(int[] one, int[] two){
+
+        int[] temp = one;
+        one = two;
+        two = temp;
+    }
 
 }
