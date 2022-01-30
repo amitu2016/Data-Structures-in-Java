@@ -7,6 +7,10 @@ public class ArrayOps {
         int[] arr = takeArray();
 
         display(arr);
+
+        int max = maxElement(arr);
+
+        System.out.println("Maximum element: "+max);
     }
 
     public static int[] takeArray(){
@@ -30,5 +34,20 @@ public class ArrayOps {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
+    }
+
+    public static int maxElement(int[] arr){
+
+        int max = Integer.MIN_VALUE;
+
+        for (int index = 0; index < arr.length; index++) {
+            
+            if (arr[index] > max) {
+                max = arr[index];
+            }
+
+        }
+
+        return max;
     }
 }
